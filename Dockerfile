@@ -24,6 +24,4 @@ COPY --chown=node:node --from=BUILD_IMAGE /usr/src/app/dist ./dist
 COPY --chown=node:node --from=BUILD_IMAGE /usr/src/app/node_modules ./node_modules
 COPY --from=BUILD_IMAGE /usr/bin/dumb-init /usr/bin/dumb-init
 
-EXPOSE 6789
-EXPOSE 6779
 CMD [ "dumb-init", "node", "./dist/main.js" ]
