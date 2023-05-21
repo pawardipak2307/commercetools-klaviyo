@@ -5,7 +5,6 @@ COPY package.json ./
 
 RUN npm install
 COPY . .
-
 EXPOSE 6789
 CMD ["node", "./dist/main.js" ]
 
