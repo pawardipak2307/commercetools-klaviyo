@@ -7,6 +7,7 @@ COPY package.json yarn.lock ./
 RUN yarn --frozen-lockfile
 COPY . .
 RUN yarn test
+RUN chmod -R 777 /usr/local/bin/npm
 RUN yarn build
 # remove development dependencies
 RUN yarn install --production --ignore-scripts --prefer-offline --force --frozen-lockfile
