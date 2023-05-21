@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`map CT order line to klaviyo event should map a commercetools order line to a klaviyo Order Product event 1`] = `
+{
+  "data": {
+    "attributes": {
+      "metric": {
+        "name": "Ordered Product",
+      },
+      "profile": {
+        "$email": "test@klaviyo.com",
+        "$id": "123-123-123",
+      },
+      "properties": {
+        "discountedPricePerQuantity": [],
+        "id": "123-123-123",
+        "lineItemMode": "",
+        "name": {
+          "en": "Test product",
+        },
+        "perMethodTaxRate": [],
+        "price": {
+          "id": "someId",
+          "value": {
+            "centAmount": 1300,
+            "currencyCode": "USD",
+            "fractionDigits": 2,
+            "type": "centPrecision",
+          },
+        },
+        "priceMode": "",
+        "productId": "",
+        "productType": {
+          "id": "id",
+          "typeId": "product-type",
+        },
+        "quantity": 0,
+        "state": [],
+        "taxedPricePortions": [],
+        "totalPrice": {
+          "centAmount": 1300,
+          "currencyCode": "USD",
+          "fractionDigits": 2,
+          "type": "centPrecision",
+        },
+        "variant": {
+          "id": 1,
+        },
+      },
+      "time": "2023-01-27T15:00:00.000Z",
+      "unique_id": "123-123-123",
+      "value": 13,
+    },
+    "type": "event",
+  },
+}
+`;
+
+exports[`map CT order to Klaviyo event should include/exclude/map custom fields in a commercetools order and send them with the klaviyo event 1`] = `
+{
+  "data": {
+    "attributes": {
+      "metric": {
+        "name": "someMetric",
+      },
+      "profile": {
+        "$email": "test@klaviyo.com",
+        "$id": "123-123-123",
+      },
+      "properties": {
+        "Categories": [],
+        "ItemNames": [],
+        "createdAt": "2023-01-27T15:00:00.000Z",
+        "customItems": [],
+        "customerEmail": "test@klaviyo.com",
+        "customerId": "123-123-123",
+        "includedFieldAfterMap": true,
+        "items": [],
+        "lastModifiedAt": "2023-01-27T15:00:00.000Z",
+        "orderId": "3456789",
+        "orderState": "Open",
+        "totalPrice": {
+          "centAmount": 1300,
+          "currencyCode": "USD",
+          "fractionDigits": 2,
+          "type": "centPrecision",
+        },
+        "version": 24,
+      },
+      "time": "2023-01-27T15:00:00.000Z",
+      "unique_id": "3456789",
+      "value": 13,
+    },
+    "type": "event",
+  },
+}
+`;
+
+exports[`map CT order to Klaviyo event should map a billing address profile property for a realtime klaviyo event 1`] = `
+{
+  "data": {
+    "attributes": {
+      "metric": {
+        "name": "someMetric",
+      },
+      "profile": {
+        "$email": "test@klaviyo.com",
+        "$id": "123-123-123",
+      },
+      "properties": {
+        "Categories": [],
+        "ItemNames": [],
+        "createdAt": "2023-01-27T15:00:00.000Z",
+        "customItems": [],
+        "customerEmail": "test@klaviyo.com",
+        "customerId": "123-123-123",
+        "items": [],
+        "lastModifiedAt": "2023-01-27T15:00:00.000Z",
+        "orderId": "3456789",
+        "orderState": "Open",
+        "totalPrice": {
+          "centAmount": 1300,
+          "currencyCode": "USD",
+          "fractionDigits": 2,
+          "type": "centPrecision",
+        },
+        "version": 24,
+      },
+      "time": "2023-01-27T15:00:00.000Z",
+      "unique_id": "3456789",
+      "value": 13,
+    },
+    "type": "event",
+  },
+}
+`;
+
+exports[`map CT order to Klaviyo event should map a commercetools order with a given metric to a klaviyo event 1`] = `
+{
+  "data": {
+    "attributes": {
+      "metric": {
+        "name": "someMetric",
+      },
+      "profile": {
+        "$email": "test@klaviyo.com",
+        "$id": "123-123-123",
+      },
+      "properties": {
+        "Categories": [],
+        "ItemNames": [],
+        "createdAt": "2023-01-27T15:00:00.000Z",
+        "customItems": [],
+        "customerEmail": "test@klaviyo.com",
+        "customerId": "123-123-123",
+        "items": [],
+        "lastModifiedAt": "2023-01-27T15:00:00.000Z",
+        "orderId": "3456789",
+        "orderState": "Open",
+        "totalPrice": {
+          "centAmount": 1300,
+          "currencyCode": "USD",
+          "fractionDigits": 2,
+          "type": "centPrecision",
+        },
+        "version": 24,
+      },
+      "time": "2023-01-27T15:00:00.000Z",
+      "unique_id": "3456789",
+      "value": 13,
+    },
+    "type": "event",
+  },
+}
+`;
+
+exports[`map CT order to Klaviyo event should map order line items and custom line items to ItemNames property in the klaviyo event 1`] = `
+{
+  "data": {
+    "attributes": {
+      "metric": {
+        "name": "someMetric",
+      },
+      "profile": {
+        "$email": "test@klaviyo.com",
+        "$id": "123-123-123",
+      },
+      "properties": {
+        "Categories": [],
+        "ItemNames": [
+          "Product Line Item 1",
+          "Custom Line Item 1",
+        ],
+        "createdAt": "2023-01-27T15:00:00.000Z",
+        "customItems": [
+          {
+            "name": {
+              "en-US": "Custom Line Item 1",
+            },
+          },
+        ],
+        "customerEmail": "test@klaviyo.com",
+        "customerId": "123-123-123",
+        "items": [
+          {
+            "name": {
+              "en-US": "Product Line Item 1",
+            },
+          },
+        ],
+        "lastModifiedAt": "2023-01-27T15:00:00.000Z",
+        "orderId": "3456789",
+        "orderState": "Open",
+        "totalPrice": {
+          "centAmount": 1300,
+          "currencyCode": "USD",
+          "fractionDigits": 2,
+          "type": "centPrecision",
+        },
+        "version": 24,
+      },
+      "time": "2023-01-27T15:00:00.000Z",
+      "unique_id": "3456789",
+      "value": 13,
+    },
+    "type": "event",
+  },
+}
+`;
+
+exports[`map CT order to Klaviyo event should map product categories to the Categories property in the klaviyo event 1`] = `
+{
+  "data": {
+    "attributes": {
+      "metric": {
+        "name": "someMetric",
+      },
+      "profile": {
+        "$email": "test@klaviyo.com",
+        "$id": "123-123-123",
+      },
+      "properties": {
+        "Categories": [
+          "Test Category 1",
+        ],
+        "ItemNames": [
+          "Product Line Item 1",
+          "Custom Line Item 1",
+        ],
+        "createdAt": "2023-01-27T15:00:00.000Z",
+        "customItems": [
+          {
+            "name": {
+              "en-US": "Custom Line Item 1",
+            },
+          },
+        ],
+        "customerEmail": "test@klaviyo.com",
+        "customerId": "123-123-123",
+        "items": [
+          {
+            "name": {
+              "en-US": "Product Line Item 1",
+            },
+          },
+        ],
+        "lastModifiedAt": "2023-01-27T15:00:00.000Z",
+        "orderId": "3456789",
+        "orderState": "Open",
+        "totalPrice": {
+          "centAmount": 1300,
+          "currencyCode": "USD",
+          "fractionDigits": 2,
+          "type": "centPrecision",
+        },
+        "version": 24,
+      },
+      "time": "2023-01-27T15:00:00.000Z",
+      "unique_id": "3456789",
+      "value": 13,
+    },
+    "type": "event",
+  },
+}
+`;
+
+exports[`map CT refunded order to Klaviyo event should include/exclude/map custom fields in a commercetools order and send them with the klaviyo event 1`] = `
+{
+  "data": {
+    "attributes": {
+      "metric": {
+        "name": "someMetric",
+      },
+      "profile": {
+        "$email": "test@klaviyo.com",
+        "$id": "123-123-123",
+      },
+      "properties": {
+        "Categories": [],
+        "ItemNames": [],
+        "createdAt": "2023-01-27T15:00:00.000Z",
+        "customItems": [],
+        "customerEmail": "test@klaviyo.com",
+        "customerId": "123-123-123",
+        "includedFieldAfterMap": true,
+        "items": [],
+        "lastModifiedAt": "2023-01-27T15:00:00.000Z",
+        "orderId": "3456789",
+        "orderState": "Open",
+        "totalPrice": {
+          "centAmount": 1300,
+          "currencyCode": "USD",
+          "fractionDigits": 2,
+          "type": "centPrecision",
+        },
+        "version": 24,
+      },
+      "time": "2023-01-27T15:00:00.000Z",
+      "unique_id": "3456789",
+      "value": 13,
+    },
+    "type": "event",
+  },
+}
+`;
+
+exports[`map CT refunded order to Klaviyo event should map a commercetools refunded order with a given metric to a klaviyo event 1`] = `
+{
+  "data": {
+    "attributes": {
+      "metric": {
+        "name": "someMetric",
+      },
+      "profile": {
+        "$email": "test@klaviyo.com",
+        "$id": "123-123-123",
+      },
+      "properties": {
+        "Categories": [],
+        "ItemNames": [],
+        "createdAt": "2023-01-27T15:00:00.000Z",
+        "customItems": [],
+        "customerEmail": "test@klaviyo.com",
+        "customerId": "123-123-123",
+        "items": [],
+        "lastModifiedAt": "2023-01-27T15:00:00.000Z",
+        "orderId": "3456789",
+        "orderState": "Open",
+        "totalPrice": {
+          "centAmount": 1300,
+          "currencyCode": "USD",
+          "fractionDigits": 2,
+          "type": "centPrecision",
+        },
+        "version": 24,
+      },
+      "time": "2023-01-27T15:00:00.000Z",
+      "unique_id": "3456789",
+      "value": 13,
+    },
+    "type": "event",
+  },
+}
+`;

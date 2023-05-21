@@ -1,0 +1,129 @@
+{
+  "order": {
+    "states": {
+      "changed": {
+        "cancelledOrder": [
+          "Cancelled"
+        ],
+        "fulfilledOrder": [
+          "Confirmed",
+          "Complete"
+        ]
+      },
+      "created": {
+        "placedOrder": [
+          "Open"
+        ]
+      }
+    },
+    "messages": {
+      "changed": [
+        "OrderStateChanged"
+      ],
+      "created": [
+        "OrderCreated",
+        "OrderImported",
+        "OrderCustomerSet"
+      ]
+    },
+    "properties": {
+      "include": [
+        "customerId",
+        "customerEmail",
+        "id",
+        "createdAt",
+        "lastModifiedAt",
+        "lineItems",
+        "customLineItems",
+        "totalPrice",
+        "orderState",
+        "version"
+      ],
+      "exclude": [
+        "paymentInfo",
+        "shippingMode",
+        "syncInfo",
+        "origin",
+        "refusedGifts",
+        "directDiscounts",
+        "discountCodes",
+        "transactionFee",
+        "createdBy"
+      ],
+      "map": {
+        "id": "orderId",
+        "lineItems": "items",
+        "customLineItems": "customItems"
+      }
+    },
+    "metrics": {
+      "cancelledOrder": "Cancelled Order",
+      "fulfilledOrder": "Fulfilled Order",
+      "placedOrder": "Placed Order",
+      "orderedProduct": "Ordered Product",
+      "refundedOrder": "Refunded Order"
+    },
+    "customFields": {
+      "properties": {
+        "include": ["includedField"],
+        "exclude": ["ignoredField"],
+        "map": {
+          "includedField": "includedFieldAfterMap"
+        }
+      }
+    }
+  },
+  "customer": {
+    "messages": {
+      "addressChanged": [
+        "CustomerAddressAdded",
+        "CustomerAddressRemoved",
+        "CustomerAddressChanged"
+      ]
+    },
+    "customFields": {
+      "properties": {
+        "include": ["includedField"],
+        "exclude": ["ignoredField"],
+        "map": {
+          "includedField": "includedFieldAfterMap"
+        }
+      }
+    }
+  },
+  "payment": {
+    "messages": {
+      "transactionAdded": [
+        "PaymentTransactionAdded"
+      ],
+      "transactionChanged": [
+        "PaymentTransactionStateChanged"
+      ]
+    },
+    "states": {
+      "validTransactionStates": [
+        "Initial",
+        "Pending",
+        "Success"
+      ]
+    }
+  },
+  "category": {
+    "messages": {
+      "created": [
+        "CategoryCreated"
+      ]
+    }
+  },
+  "product": {
+    "messages": {
+      "deleted": [
+        "ProductUnpublished",
+        "ResourceDeleted"
+      ]
+    },
+    "inventory": {
+      "useChannelInventory": "03c22295-79b0-4838-bc4c-9724133a27ce"
+    }
+  }
+}

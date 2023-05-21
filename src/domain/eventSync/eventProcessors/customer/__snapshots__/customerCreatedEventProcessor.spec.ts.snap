@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`customerCreatedEvent > generateKlaviyoEvent should generate the klaviyo create profile event getting the customer from CT when is not included in the message 1`] = `
+{
+  "body": {
+    "data": {
+      "attributes": {
+        "email": "Alfred_Lebsack@hotmail.com",
+        "external_id": "77d8e6f4-2dee-4ac9-bd21-4035b6ba76d8",
+        "first_name": "Jailyn",
+        "last_name": "Hilll",
+        "location": {
+          "address1": "12, First Street",
+          "address2": "",
+          "city": "Brookefort",
+          "country": "NL",
+          "region": undefined,
+          "zip": "12345",
+        },
+        "organization": undefined,
+        "phone_number": "+39 3234567892",
+        "properties": undefined,
+        "title": "Miss",
+      },
+      "id": undefined,
+      "type": "profile",
+    },
+  },
+  "type": "profileCreated",
+}
+`;
+
+exports[`customerCreatedEvent > generateKlaviyoEvent should generate the klaviyo create profile event when the input customer created event is valid 1`] = `
+{
+  "body": {
+    "data": {
+      "attributes": {
+        "email": "roberto.smith@klaviyo.com",
+        "external_id": "e54d8233-be41-4ce0-ae68-5d0674dd8517",
+        "first_name": "Roberto",
+        "last_name": "Smith",
+        "location": {
+          "address1": "C, Tall Tower, 23, High Road",
+          "address2": "private access, additional address info",
+          "city": "London",
+          "country": "UK",
+          "region": "aRegion",
+          "zip": "WE1 2DP",
+        },
+        "organization": "Klaviyo",
+        "phone_number": "+4407476588266",
+        "properties": undefined,
+        "title": "Mr",
+      },
+      "id": undefined,
+      "type": "profile",
+    },
+  },
+  "type": "profileCreated",
+}
+`;
+
+exports[`customerCreatedEvent > generateKlaviyoEvent should generate the klaviyo create profile event with the default billing address when is available 1`] = `
+{
+  "body": {
+    "data": {
+      "attributes": {
+        "email": "roberto.smith@klaviyo.com",
+        "external_id": "e54d8233-be41-4ce0-ae68-5d0674dd8517",
+        "first_name": "Roberto",
+        "last_name": "Smith",
+        "location": {
+          "address1": "C, Tall Tower, 23, I'm the default billing address",
+          "address2": "private access, additional address info",
+          "city": "London",
+          "country": "UK",
+          "region": "aRegion",
+          "zip": "WS2 5FX",
+        },
+        "organization": "Klaviyo",
+        "phone_number": "+4407476588266",
+        "properties": undefined,
+        "title": "Mr",
+      },
+      "id": undefined,
+      "type": "profile",
+    },
+  },
+  "type": "profileCreated",
+}
+`;
+
+exports[`customerCreatedEvent > generateKlaviyoEvent should generate the klaviyo create profile event with the first address when no billing address ids are set 1`] = `
+{
+  "body": {
+    "data": {
+      "attributes": {
+        "email": "roberto.smith@klaviyo.com",
+        "external_id": "e54d8233-be41-4ce0-ae68-5d0674dd8517",
+        "first_name": "Roberto",
+        "last_name": "Smith",
+        "location": {
+          "address1": "C, Tall Tower, 23, I'm a random address",
+          "address2": "private access, I'm a random address",
+          "city": "London",
+          "country": "UK",
+          "region": "aRegion",
+          "zip": "WS2 5FX",
+        },
+        "organization": "Klaviyo",
+        "phone_number": "+4407476588266",
+        "properties": undefined,
+        "title": "Mr",
+      },
+      "id": undefined,
+      "type": "profile",
+    },
+  },
+  "type": "profileCreated",
+}
+`;
+
+exports[`customerCreatedEvent > generateKlaviyoEvent should generate the klaviyo create profile event with the first billing address available when no default billing address is set 1`] = `
+{
+  "body": {
+    "data": {
+      "attributes": {
+        "email": "roberto.smith@klaviyo.com",
+        "external_id": "e54d8233-be41-4ce0-ae68-5d0674dd8517",
+        "first_name": "Roberto",
+        "last_name": "Smith",
+        "location": {
+          "address1": "C, Tall Tower, 23, I'm another billing address",
+          "address2": "private access, I'm another billing address",
+          "city": "London",
+          "country": "UK",
+          "region": "aRegion",
+          "zip": "WS2 5FY",
+        },
+        "organization": "Klaviyo",
+        "phone_number": "+4407476588266",
+        "properties": undefined,
+        "title": "Mr",
+      },
+      "id": undefined,
+      "type": "profile",
+    },
+  },
+  "type": "profileCreated",
+}
+`;
+
+exports[`customerCreatedEvent > generateKlaviyoEvent should generate the klaviyo create profile event without customer address inf when no address is available 1`] = `
+{
+  "body": {
+    "data": {
+      "attributes": {
+        "email": "roberto.smith@klaviyo.com",
+        "external_id": "e54d8233-be41-4ce0-ae68-5d0674dd8517",
+        "first_name": "Roberto",
+        "last_name": "Smith",
+        "location": null,
+        "organization": "Klaviyo",
+        "phone_number": undefined,
+        "properties": undefined,
+        "title": "Mr",
+      },
+      "id": undefined,
+      "type": "profile",
+    },
+  },
+  "type": "profileCreated",
+}
+`;

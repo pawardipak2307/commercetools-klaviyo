@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Parameters:
+Resources:
+  libs:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: rds-mysql-lib
+      Description: Dependencies for the rds-mysql sample app.
+      ContentUri: /.
+      CompatibleRuntimes:
+        - nodejs10.x
+        - nodejs12.x
+        - nodejs20.x
+

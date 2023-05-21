@@ -1,0 +1,99 @@
+{
+  "order": {
+    "states": {
+      "changed": {
+        "cancelledOrder": [
+          "Cancelled"
+        ],
+        "fulfilledOrder": [
+          "Confirmed",
+          "Complete"
+        ]
+      },
+      "created": {
+        "placedOrder": [
+          "Open"
+        ]
+      }
+    },
+    "messages": {
+      "changed": [
+        "OrderStateChanged"
+      ],
+      "created": [
+        "OrderCreated",
+        "OrderImported",
+        "OrderCustomerSet"
+      ]
+    },
+    "properties": {
+      "include": [],
+      "exclude": [],
+      "map": {}
+    },
+    "metrics": {
+      "cancelledOrder": "Cancelled Order",
+      "fulfilledOrder": "Fulfilled Order",
+      "placedOrder": "Placed Order",
+      "orderedProduct": "Ordered Product",
+      "refundedOrder": "Refunded Order"
+    },
+    "customFields": {
+      "properties": {
+        "include": [],
+        "exclude": [],
+        "map": {}
+      }
+    }
+  },
+  "customer": {
+    "messages": {
+      "addressChanged": [
+        "CustomerAddressAdded",
+        "CustomerAddressRemoved",
+        "CustomerAddressChanged"
+      ]
+    },
+    "customFields": {
+      "properties": {
+        "include": [],
+        "exclude": [],
+        "map": {}
+      }
+    }
+  },
+  "payment": {
+    "messages": {
+      "transactionAdded": [
+        "PaymentTransactionAdded"
+      ],
+      "transactionChanged": [
+        "PaymentTransactionStateChanged"
+      ]
+    },
+    "states": {
+      "validTransactionStates": [
+        "Initial",
+        "Pending",
+        "Success"
+      ]
+    }
+  },
+  "category": {
+    "messages": {
+      "created": [
+        "CategoryCreated"
+      ]
+    }
+  },
+  "product": {
+    "messages": {
+      "deleted": [
+        "ProductUnpublished"
+      ]
+    },
+    "inventory": {
+      "useChannelInventory": ""
+    }
+  }
+}
