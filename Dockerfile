@@ -8,7 +8,7 @@ RUN yarn --frozen-lockfile
 COPY . .
 RUN which yarn
 #RUN yarn test
-RUN chmod -R 777 /usr/local/bin/npm
+RUN chmod -R 777 /usr/local/bin/yarn
 RUN yarn build
 # remove development dependencies
 RUN yarn install --production --ignore-scripts --prefer-offline --force --frozen-lockfile
