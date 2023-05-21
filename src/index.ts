@@ -8,5 +8,5 @@ dotenv.config();
 const main = (adapter: GenericAdapter) => {
     return adapter();
 };
-export const eventApp = main(pubsubAdapter);
+// export const eventApp = main(pubsubAdapter);
 export const bulkSyncApp = main(bulkSyncApiAdapter);
